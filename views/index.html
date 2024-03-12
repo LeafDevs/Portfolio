@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>LeafyTea Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </header>
+    <hero>
+        <h1 id="text1"></h1>
+        <h2 id="text2"></h2>
+        <img src="img/pfp.jpg">
+    </hero>
+    <about id="#about">
+        <h1>About Me</h1>
+        <p>
+            Greetings! I'm a 17-year-old tech enthusiast with a keen interest in Robotics, Computer Science, and game
+            development. Proficient in Java, Javascript, and Python, I specialize in both front-end and back-end web
+            development, but strive to be better at front-end.
+            Driven by a passion for innovation, I aspire to create immersive gaming experiences in the realm of Virtual
+            Reality (VR) and potentially develop my own VR system. Looking ahead, I plan to pursue a Bachelor's degree
+            in Robotics to deepen my knowledge of autonomous systems, followed by a Master's in Computer Science at the
+            esteemed University of Amsterdam.
+            In addition to my technical skills, I have a penchant for clean aesthetics, with white and pink as my
+            favorite colors. White Lilies and Amaryllis are my preferred flowers, embodying the simplicity and passion
+            that I aim to bring to my work.
+            Join me on this exciting journey as I navigate the intersections of technology and creativity, striving to
+            make meaningful contributions to the fields of Robotics, Computer Science, and VR game development.
+            Together, let's shape a future where innovation and simplicity harmonize seamlessly.</p>
+    </about>
+    <projects id="projects">
+        <h1>Featured Projects</h1>
+        <project>
+            <img class="left" src="img/Bot-Logo.jpeg" id="https://github.com/LeafDevs/NyaaBot">
+            <textlabel>
+                <h1>Nyaa Bot</h1>
+                <p>Nyaa Bot is a discord bot for getting torrents for animes and mangas from the Nyaa.si site. This
+                    project utilizes <a href="https://github.com/Kylart/Nyaapi">NyaAPI by Kylart</a> to fetch the
+                    torrents from Nyaa.si.</p>
+            </textlabel>
+        </project>
+        <project>
+            <textlabel>
+                <h1>MMORPG Server Core</h1>
+                <p>This is a minecraft server plugin that utilizes the Minecraft Spigot API to create a perfect MMORPG
+                    Server for minecraft. This was built using 1.20.2 Minecraft and is easy to understand.</p>
+            </textlabel>
+            <img class="right" src="img/github.png" id="https://github.com/LeafDevs/SeniorProject/">
+        </project>
+        <project>
+            <img class="left" src="img/sun.png" id="https://github.com/LeafDevs/SolarSystem">
+            <textlabel>
+                <h1>Web3D Solar System</h1>
+                <p>This is a 3D Solar System built in the web. This project utilizes Three.JS to achieve this it is currently up and running to be viewed @ <a href="leafdevs.github.io">here</a>!</p>
+            </textlabel>
+        </project>
+    </projects>
+</body>
+<script>
+
+    function type(id, text, speed = 55) {
+        let char = 0;
+
+        function typeRecursive() {
+            if (char >= text.length) {
+                document.getElementById(id).classList.add('slide')
+                if (id == "text1") {
+                    type('text2', 'and I\'m a Web Developer', 30)
+                }
+            }
+            if (char < text.length) {
+                document.getElementById(id).innerHTML += text.charAt(char);
+                char += 1;
+                setTimeout(typeRecursive, speed);
+            }
+        }
+
+        typeRecursive();
+    }
+
+    type('text1', "My name is Leaf")
+
+    const imagesWithHttps = document.querySelectorAll('[id*="https"]');
+
+    imagesWithHttps.forEach(image => {
+        image.addEventListener('click', () => {
+            window.location.href = image.id
+        })
+    })
+
+</script>
+
+</html>
