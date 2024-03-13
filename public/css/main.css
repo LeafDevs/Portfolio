@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #FFFFFF;
+    background-color: #ffdffd;
     background-image: url('/img/BG.jpg');
     background-attachment: fixed;
     background-position: center;
@@ -11,18 +11,15 @@ body {
 }
 
 header {
-    background-color: rgba(250, 30, 30, 0.25);
+    background-color: #ffdffd;
     width: 100%;
-    height: 10px;
+    height: 50px;
     transition: height ease 320ms;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-}
-
-header:hover {
-    height: 50px;
+    border-bottom: 5px solid #f8c8f5;
 }
 
 header.show {
@@ -30,23 +27,18 @@ header.show {
 }
 
 header a {
-    opacity: 0;
     font-weight: 600;
     font-size: 30px;
     text-decoration: none;
-    color: aliceblue;
+    color: black;
     cursor:pointer;
-    transition: opacity ease 320ms,
+    transition: border-radius ease 320ms,
                 color ease 320ms
     ;
 }
 
-header:hover a {
-    opacity: 1;
-}
-
 header a:hover {
-    color:rgb(197, 224, 249);
+    border-radius: 8px solid #ffdffd;
 }
 
 hero {
@@ -71,8 +63,8 @@ hero h2 {
 }
 
 hero img {
-    width: 250px;
-    height: 250px;
+    width: 450px;
+    height: auto;
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -84,11 +76,12 @@ hero img {
 about {
     display: flex;
     flex-direction: column;
-    background-color: #343434;
+    background-color: #ffdffd;
     width: 100%;
     height: 250px;
     text-align: center;
     border-radius: 25px 25px 0 0;
+    color: black;
 
 }
 
@@ -104,8 +97,9 @@ about p {
 
 
 projects {
-    border-top: 10px rgb(41, 41, 41) solid;
-    background-color: #343434;
+    border-top: 10px rgb(255, 209, 246) solid;
+    background-color: #ffdffd;
+    color: black;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -123,10 +117,10 @@ project {
     height: auto;
     display: flex;
     flex-direction: row;
-    background-color: #232323;
+    background-color: #fdd4f5;
     margin-left: 5%;
     margin-right: 5%;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
 }
 
 project img {
@@ -155,11 +149,15 @@ textlabel {
 project p {
     margin-top: 40px;
     font-size: 25px;
-    color: aliceblue;
+    color: rgb(34, 34, 34);
+
 }
 
 project p a {
-    color: orange
+    color: orange;
+    text-decoration: none;
+    outline: none;
+    font-style: none;
 }
 
 project p a:visited {
@@ -171,5 +169,93 @@ project p a:hover {
 }
 
 project p a:active {
+    color:#c0664d
+}
+
+
+project info {
+    display: flex;
+    flex-direction: row;
+    row-gap: 25px;
+    justify-content:right;
+    align-items: center;
+}
+
+project info license {
+    width: auto;
+    min-width: 300px;
+    height: auto;
+}
+
+project info lang {
+    width: 120px;
+    height: 30px;
+    min-width: 250px;
+    margin-left: 250px;
+    margin-right: 250px;
+    background-size: 100% 3px;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+project info lang p {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+project info license p {
+    font-size: 15px;
+    margin-top: -8%;
+    margin-left: 60%;
+}
+
+hero#contact {
+    margin-bottom: 0;
+}
+
+hero socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    justify-content: space-evenly;
+    background-color: #fdd4f5;
+}
+
+
+hero socials social {
+    color: white;
+    font-size: 25px;
+}
+
+hero socials social p {
+    font-size: 25px;
+    color: rgb(34, 34, 34);
+}
+
+hero socials social p a {
+    text-decoration: none;
+    outline: none;
+    font-style: none;
+    color: orange
+}
+
+hero socials social p a:visited {
+    text-decoration: none;
+    outline: none;
+    font-style: none;
+    color: #c0664d
+}
+
+hero socials social p a:hover {
+    text-decoration: none;
+    outline: none;
+    font-style: none;
+    color: #ff7b00
+}
+
+hero socials social p a:active {
+    text-decoration: none;
+    outline: none;
+    font-style: none;
     color:#c0664d
 }
